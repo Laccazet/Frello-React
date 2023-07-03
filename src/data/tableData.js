@@ -52,8 +52,8 @@ var tableData = [
     {
         id: uuidv4(),
         name: "Table2",
-        background: az_subtle,
-        color: "#0f766e",
+        background: arches,
+        color: "#CBD5E1",
         lists: [
             {
                 id: uuidv4(),

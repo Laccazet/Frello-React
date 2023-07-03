@@ -1,6 +1,8 @@
 import { createContext, useState } from "react";
 import tableData from "../data/tableData";
 
+import arabesque from "../assets/arabesque.png";
+
 const dataContext = createContext();
 
 export function ContextProvider( {children} ) {
@@ -9,6 +11,7 @@ export function ContextProvider( {children} ) {
     var [selectedTable, setSelectedTable] = useState([{}]);
     var [loading, setLoading] = useState(false);
     var [found, setFound] = useState(true);
+    var [addTableMode, setAddTableMode] = useState(false);
 
 
     const getTable = (t) => {
@@ -25,6 +28,23 @@ export function ContextProvider( {children} ) {
         setLoading(false);
     }
 
+    const handleAddTable = () => {
+        addTableMode ? setAddTableMode(false) : setAddTableMode(true);
+    }
+
+
+    const addTable = (newTable) => {
+        setData(prev => {
+            return [...prev, newTable];
+        })
+    }
+
+    const deleteTable = (id) => {
+        setData(data.filter(item => {
+            console.log(item);
+            return item.id != id;
+        }))
+    }
 
 
     return (
@@ -34,6 +54,11 @@ export function ContextProvider( {children} ) {
             getTable,
             found,
             loading,
+            addTable,
+            addTableMode,
+            handleAddTable,
+            addTable,
+            deleteTable,
         }}>
             {children}
         </dataContext.Provider>

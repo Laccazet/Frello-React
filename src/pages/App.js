@@ -10,7 +10,7 @@ export default function App() {
     <div className="w-full h-full bg-slate-800 flex flex-col justify-center items-center">
         <BrowserRouter>
             <Header />
-            <div className="h-[90%] flex justify-center items-center">
+            <div className="h-[90%] w-full flex justify-center items-center">
               <Routes>
                   <Route exact path="/*" element={<NotFound />} />
                   <Route exact path="/about" element={<About />} />
