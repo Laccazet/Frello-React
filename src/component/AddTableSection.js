@@ -69,10 +69,14 @@ export default function AddTableSection() {
     }
 
     return (
-        <div className="w-[300px] h-[300px] bg-slate-700 rounded-2xl absolute top-[100px] left-[200px]">
+        <div className="w-[300px] h-[300px] bg-slate-700 text-[#f1f1f1b7] rounded-2xl absolute -top-[20px] left-[200px] flex flex-col">
 
             <div className="w-full h-[10%] relative flex justify-end items-center">
                 <button className="w-10" onClick={handleAddTable}>X</button>
+            </div>
+
+            <div className="flex justify-center items-center">
+                <h1>Wallpapers</h1>
             </div>
 
             <div className="w-full h-2/6 flex justify-evenly items-center">
@@ -89,6 +93,10 @@ export default function AddTableSection() {
 
             </div>
 
+            <div className="flex justify-center items-center">
+                <h1>Colors</h1>
+            </div>
+
             <div className="w-full h-1/6 flex justify-evenly items-center">
 
                 {colors.map((item, index) => {
@@ -101,11 +109,11 @@ export default function AddTableSection() {
             </div>
 
             <div className="w-full h-1/6 flex justify-center items-center">
-                <input placeholder="Table Name" className="w-3/4 rounded-md" onChange={(e) => {handleInput(e)}} />
+                <input placeholder="Table Name" className="w-3/4 rounded-md text-black text-center" onChange={(e) => {handleInput(e)}} />
             </div>
 
             <div className="w-full h-1/6 flex justify-center items-center">
-                <button className="w-2/4 bg-sky-700" onClick={handleCreate}>Create</button>
+                <button className="w-2/4 bg-sky-700 rounded-md" onClick={handleCreate}>Create</button>
             </div>
 
         </div>

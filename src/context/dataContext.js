@@ -7,7 +7,7 @@ export function ContextProvider( {children} ) {
 
     var [data, setData] = useState(tableData);
     var [selectedTable, setSelectedTable] = useState([{}]);
-    var [color, setColor] = useState("gray");
+    var [color, setColor] = useState("#25292E");
     var [bg, setBg] = useState()
     var [loading, setLoading] = useState(false);
     var [found, setFound] = useState(true);

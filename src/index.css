@@ -10,3 +10,22 @@ html, body, #root {
 .selectedTable {
     border: solid 3px white;
 }
+
+.listScreen {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.list {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.glassy {
+    background: rgba(255, 255, 255, 0.63);
+    border-radius: 20.44px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(17.82px);
+    -webkit-backdrop-filter: blur(17.82px);
+    border: 1px solid rgba(255, 255, 255, 0.63);
+}

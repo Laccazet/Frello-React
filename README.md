@@ -1,3 +1,16 @@
+# Frello (Project management app like Trello.)
+
+Tools I used:
+- Tailwind
+- React
+- React Icons
+- Framer Motion
+
+![FireShot Capture 015 - Frello - localhost](https://github.com/Laccazet/IM2CII/assets/43687373/6640159d-97ce-4bc2-b25c-fbf742043b44)
+
+![FireShot Capture 016 - Frello - localhost](https://github.com/Laccazet/IM2CII/assets/43687373/68e10367-baf6-41d2-a286-6f69103341b2)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

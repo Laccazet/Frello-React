@@ -16,7 +16,7 @@ export default function App() {
     style={{backgroundColor: `${color}`, backgroundImage: `url(${bg})`}}>
         <BrowserRouter>
             <Header />
-            <div className="h-[90%] w-full flex justify-center items-center">
+            <div className="h-[93%] w-full flex justify-center items-center">
               <Routes>
                   <Route exact path="/*" element={<NotFound />} />
                   <Route exact path="/about" element={<About />} />

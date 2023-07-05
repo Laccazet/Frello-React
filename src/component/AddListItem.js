@@ -36,18 +36,18 @@ export default function AddListItem() {
 
     if (!addForm) {
         return (
-            <div className='bg-slate-500 w-[300px] p-5' onClick={() => {setAddForm(true)}}>+ Add another list</div>
+            <div className='bg-slate-500 w-[300px] p-5 glassy cursor-pointer ' onClick={() => {setAddForm(true)}}>+ Add another list</div>
         )
     }else {
         return (
-            <div className='bg-slate-500 w-[300px] p-3 flex flex-col justify-center gap-3'>
+            <div className='bg-[#070707] w-[300px] p-3 flex flex-col justify-center gap-3 rounded-xl text-[#ffffffae]'>
                 <div>
-                    <input placeholder="Enter list title..." className="w-full text-xl" onChange={(e) => {handleInput(e)}} />
+                    <input placeholder="Enter list title..." className="w-full text-xl bg-[#2b2d2e] " onChange={(e) => {handleInput(e)}} />
                 </div>
 
                 <div className="flex justify-start gap-2">
-                    <button className="w-20 bg-sky-700" disabled={input.length > 0 ? false : true} onClick={() => {handleCreate(input)}} >Add list</button>
-                    <button className="w-5 bg-red-900" onClick={() => {setAddForm(false)}}>X</button>
+                    <button className="w-20 bg-[#40603A] rounded-md cursor-pointer" disabled={input.length > 0 ? false : true} onClick={() => {handleCreate(input)}} >Add list</button>
+                    <button className="w-5 bg-red-500 rounded-md cursor-pointer" onClick={() => {setAddForm(false)}}>X</button>
                 </div>
             </div>
         )

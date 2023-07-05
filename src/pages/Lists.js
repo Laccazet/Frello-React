@@ -4,6 +4,7 @@ import NotFound from "./NotFound";
 import dataContext from "../context/dataContext"
 import ListItem from "../component/ListItem";
 import AddListItem from "../component/AddListItem";
+import { motion, AnimatePresence } from "framer-motion"
 
 
 export default function Lists() {
@@ -20,10 +21,21 @@ export default function Lists() {
     if (!loading) {
         if (found) {
             return (
-                <div className="w-full h-full flex flex-wrap justify-start items-start gap-20 p-5">
-                    {selectedTable?.lists?.map(list => {
-                        return <ListItem key={list.id} list={list} id={list.id} name={list.name} cards={list.cards} />
-                    })}
+                <div className="min-w-full h-full flex justify-start items-start listScreen gap-10 p-5">
+                    <AnimatePresence>
+                        {selectedTable?.lists?.map(list => {
+                            return (
+                                <motion.div 
+                                    key={list.id}
+                                    initial={{opacity: 0}}
+                                    animate={{opacity: 1}}
+                                    exit={{opacity: 0}}
+                                >
+                                <ListItem key={list.id} list={list} id={list.id} name={list.name} cards={list.cards} />
+                            </motion.div>
+                            )
+                        })}
+                    </AnimatePresence>
 
                     <AddListItem />
                 </div>
