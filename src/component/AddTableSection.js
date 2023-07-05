@@ -12,7 +12,7 @@ export default function AddTableSection() {
     const {handleAddTable, addTable} = useContext(dataContext);
 
     const backgrounds = [arabesque, arches, az_subtle];
-    const colors = ["#CBD5E1", "#EF7070", "#4F46E5", "#4ABDF8", "#F49E3F"];
+    const colors = ["#CBD5E1", "#EBA0A0", "#4F46E5", "#4ABDF8", "#F49E3F"];
 
 
     var [color, setColor] = useState("#CBD5E1");

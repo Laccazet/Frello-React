@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import dataContext from "../context/dataContext"
 import TableItem from "../component/TableItem"
 import AddTableItem from "../component/AddTableItem";
@@ -6,7 +6,11 @@ import AddTableSection from "../component/AddTableSection";
 
 export default function Tables() {
 
-    const {data, addTableMode} = useContext(dataContext);
+    const {data, setTheme, addTableMode} = useContext(dataContext);
+
+    useEffect(() => {
+        setTheme("gray", "");
+    })
 
     return (
         <div className="w-[700px] h-[500px] rounded-2xl bg-slate-500 relative">
